@@ -6,6 +6,7 @@ let page;
 beforeEach(async () => {
   page = await browser.newPage();
   await page.goto("http://qamid.tmweb.ru/client/index.php");
+  await page.setDefaultNavigationTimeout(0);
 });
 
 afterEach(() => {
